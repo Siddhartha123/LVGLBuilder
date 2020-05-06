@@ -49,7 +49,7 @@ MainWindow::MainWindow(QWidget *parent)
 	connect(m_ui->action_new, &QAction::triggered,
 			  this, &MainWindow::openNewProject
 			  );
-
+ 
 	m_ui->property_tree->setModel(m_propertyModel);
 	m_ui->property_tree->setItemDelegate(new LVGLPropertyDelegate);
 
@@ -96,13 +96,15 @@ MainWindow::MainWindow(QWidget *parent)
 	}
 	updateRecentActionList();
 
-	// add style editor dock to property dock and show the property dock
-	tabifyDockWidget(m_ui->PropertyEditor, m_ui->StyleEditor);
-	m_ui->PropertyEditor->raise();
-
 	// add font editor dock to image dock and show the image dock
 	tabifyDockWidget(m_ui->ImageEditor, m_ui->FontEditor);
-	m_ui->ImageEditor->raise();
+	tabifyDockWidget(m_ui->FontEditor,m_ui->PropertyEditor);
+	// m_ui->ImageEditor->raise();
+	
+	// add style editor dock and object inspector dock to property dock and show the property dock
+	tabifyDockWidget(m_ui->PropertyEditor, m_ui->StyleEditor);
+	tabifyDockWidget(m_ui->StyleEditor, m_ui->ObjecInspector);
+	m_ui->PropertyEditor->raise();
 }
 
 MainWindow::~MainWindow()

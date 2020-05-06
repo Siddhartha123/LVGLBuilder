@@ -121,7 +121,7 @@
   <widget class="QDockWidget" name="ObjecInspector">
    <property name="baseSize">
     <size>
-     <width>330</width>
+     <width>200</width>
      <height>300</height>
     </size>
    </property>
@@ -146,7 +146,7 @@
   <widget class="QDockWidget" name="PropertyEditor">
    <property name="baseSize">
     <size>
-     <width>330</width>
+     <width>200</width>
      <height>300</height>
     </size>
    </property>
@@ -162,7 +162,7 @@
       <widget class="QTreeView" name="property_tree">
        <property name="minimumSize">
         <size>
-         <width>400</width>
+         <width>200</width>
          <height>0</height>
         </size>
        </property>
@@ -177,7 +177,7 @@
   <widget class="QDockWidget" name="WidgeBox">
    <property name="baseSize">
     <size>
-     <width>330</width>
+     <width>200</width>
      <height>0</height>
     </size>
    </property>
