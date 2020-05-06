@@ -29,7 +29,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
 	m_ui->setupUi(this);
 
-	m_zoom_slider->setRange(-2, 2);
+	m_zoom_slider->setRange(-50, 50);
 	connect(m_zoom_slider, &QSlider::valueChanged, m_ui->simulation, &LVGLSimulator::setZoomLevel);
 	m_ui->statusbar->addPermanentWidget(m_zoom_slider);
 
